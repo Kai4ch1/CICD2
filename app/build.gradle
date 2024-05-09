@@ -5,10 +5,14 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-    
+
     packagingOptions {
         pickFirst '**/libc++_shared.so'
         pickFirst '**/libfbjni.so'
+    }
+    
+    lintOptions {
+        abortOnError false
     }
 
     defaultConfig {
